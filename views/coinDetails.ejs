@@ -1,0 +1,126 @@
+<%- include("partials/head.ejs") %>
+<div id="heading">
+    <div style="display: flex;align-items: end;gap: 10px;">
+        <img style="filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px); margin-left: 10px;" src=<%= iconUrl %>>
+        <h1><%= name %></h1>
+    </div>
+    <h2>$<%= price %></h2>
+    <div class="text-box" style="width: 100%; display: flex; justify-content: flex-end; padding-bottom: 60px; padding-right: 70px;">
+        <a href="#" class="btn btn-white btn-        animate" >BUY</a>
+    </div>
+    <div class="text-box" style=" display: flex; justify-content: flex-end; padding-bottom: 60px; padding-right: 50px;">
+        <a href="#" class="btn2 btn2-white btn2-        animate" >SELL</a>
+    </div>
+</div>
+<div id="coinDiscription">
+    <p style="font-size: 1.3rem;">  <%= description %></p>
+    <div id="coinDiscription-discription">
+        <h2>PRICE CHART</h2>
+        <% if(Array.from(change)[0]==="-") {%>
+            <h2><span><%= period %></span>&nbsp;<span2 value="<%=change%>" id="change" style="color: red;"></span2></h2>
+        <% } else { %>
+            <h2 style="color: greenyellow;"><span><%= period %></span>&nbsp;+<span2 value="<%=change%>" id="change" style="color: greenyellow;"></span2></h2>
+        <% } %>
+        <h2><span>High</span>&nbsp;$<span2 value="<%=high%>" id="high"></span2></h2>
+        <h2><span>Low</span>&nbsp;$<span2 value="<%= low %>" id="low"></span2></h2>
+    </div>
+</div>
+<div>
+    <input id="sparkline" type="hidden" value=<%= sparkline %> >
+    <canvas id="priceChart" style="width:100%; height: 500px;"></canvas>
+    
+        <form action="/changePriceChart" method="post">
+            <div id="timePeriodButtonsBlock">
+            <div style="border: 1px solid #765dd0; padding: 10px; display: flex;">
+            <label for="timePeriod" style="color: white;">Time Period:</label>
+            <input type="hidden" name="uuid" id="uuid" value=<%= uuid %>>
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="1h">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="3h">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="12h">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="24h">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="7d">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="30d">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="3m">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="1y">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="3y">
+            <input type="submit" name="timePeriod" id="timePeriodButtons" class="timePeriodButtons" value="5y">
+            </div>
+            </div>
+        </form>
+</div>
+<div id="statistics-supply">
+    <div id="statistics">
+        <div>
+            <h2>View  Statictics</h2>
+            <p>An overview showing the statistics of <%= name %>, such as the base and quote currency, the rank, and trading volume.</p>
+        </div>
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>Price to USD</th>
+                    <td>$<%= price %></td>
+                </tr>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>Price to BTC</th>
+                    <td><%= btcPrice %> BTC</td>
+                </tr>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>Coin Rank</th>
+                    <td><%= rank %>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>24h Volume</th>
+                    <td>$<%= $24hVolume %></td>
+                </tr>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>Market Cap</th>
+                    <td>$<%= marketCap %></td>
+                </tr>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>Fully Diluted Market Cap</th>
+                    <td>$<%= fullyDilutedMarketCap %></td>
+                </tr>
+                <tr>
+                    <td class="stats__icon"></td>
+                    <th>All Time High</th>
+                    <td>$<%= allTimeHigh %></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="supply">
+        <h2>Supply  Information</h2>
+        <p>View the total and circulating supply of <%= name %>, including details on how the supplies are calculated.</p>
+        <div style="display: flex; justify-content: center; padding-bottom: 30px;">
+            <div class="pie" data-pie='{ "percent": <%= (circulating/total)*100 %>, "size": 150 }'></div> 
+        </div>
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <th>Circulating supply</th>
+                    <td><%= circulating %> <%= symbol %></td>
+                </tr>
+                <tr>
+                    <th>Total supply</th>
+                    <td><%= total %> <%= symbol %></td>
+                </tr>
+                <tr>
+                    <th>Max supply</th>
+                    <td><%= max %> <%= symbol %></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="linkButtons">
+        <% links.forEach((item) => { %>
+            <a href=<%= item.url %>><button class="button-before"><%= item.type %></button></a>
+        <% }); %>
+</div>
+<%- include("partials/foot.ejs") %>

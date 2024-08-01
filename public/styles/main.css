@@ -1,0 +1,425 @@
+body{
+    background-color: #1c1b21;
+    margin: 0px;
+}
+#navbar{
+    background-color: #765dd0;
+    height: 40px;
+}
+
+#heading{
+    display: flex;
+    gap: 70px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #765dd0;
+    align-items: end;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#heading  h1{
+    color: #765dd0;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 3rem;
+}
+#heading > h2{
+
+    color: white;
+    margin-bottom: 0PX;
+    padding-bottom: 10px;
+}
+#heading  img{
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    padding-bottom: 5px;
+    
+}
+#coinDiscription{
+    color: white;
+}
+
+
+#coinDiscription-discription{
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+}
+span{
+    color: #765dd0;
+    font-size: 1rem;
+}
+#timePeriodButtonsBlock{
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+.timePeriodButtons{
+    background-color: #1c1b21;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+}
+
+#statistics-supply{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+}
+#statistics,#supply{
+    padding: 50px;
+}
+#statistics-supply h2{
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-style: normal;
+    color: #765dd0;
+    font-size: 2rem;
+}
+#statistics-supply p{
+    color: white;
+}
+#statistics-supply th{
+    color: #765dd0;
+    text-align: left;
+}
+#statistics-supply td{
+    color: white;
+    text-align: right;
+}
+#linkButtons{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+    padding-top: 50px;
+    background-image: linear-gradient(#302756, #000000);
+}
+.button-before{
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    background-color: #1c1b2100;
+    color: white;
+    padding-left: 5px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    border: 0;
+    border-left: 1px solid #765dd0;
+}
+
+th, td {
+    border-bottom: 1px solid #765dd0;
+    font-size: 1.3rem;
+    padding: 30px 0px;
+}
+
+
+.pie-text-1 {
+    fill: white;
+    font-size: 0.8rem;
+    /* e.t.c */
+  }
+.btcDominance-text-1{
+    fill: white;
+    /* filter: drop-shadow(#F8F87C 0.1rem 0.1rem 3px); */
+    font-size: 0.8rem;
+}
+
+#coinsTable{
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+}
+
+#coinsTable th {
+    text-align: left;
+    color: #765dd0;
+    font-size: 1rem;
+}
+
+#globalStats th {
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    text-align: left;
+    color: #765dd0;
+    font-size: 0.8rem;
+    border-bottom: 0px;
+}
+
+#globalStats td{
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    font-size: 1rem;
+    color: whitesmoke;
+    padding: 0px;
+    border: 0;
+}
+
+#coinsTable button {
+    background-color: #1c1b21;
+    color: #765dd0;
+    border: 0;
+}
+
+#bestCoins th {
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    text-align: left;
+    color: #765dd0;
+    font-size: 1.5rem;
+    border-bottom: 0px;
+}
+
+#bestCoins td{
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    font-size: 1rem;
+    color: whitesmoke;
+    margin-top: 50px;
+    border-bottom: 1px solid #765dd0;
+    text-align: center;   
+}
+
+.coinRow{
+    transition: transform 0.3s;
+}
+
+.mouse-enter-coin-row {
+    transform: scale(1.15);
+    cursor: pointer;
+    /* filter: drop-shadow(#ca9eff 0.1rem 0.1rem 5px); */
+}
+
+.mouse-enter-button{
+    position: relative;
+    top: -5px;
+    background-color: #765dd0;
+    border: 1px solid #765dd0;
+    border-radius: 12px;
+    color: white;
+    filter: drop-shadow(white 0.1rem 0.1rem 5px);
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 35px;
+    font-size: 1rem;
+}
+
+.mouse-enter-period-button{
+    position: relative;
+    top: -5px;
+    background-color: #765dd0;
+    border: 1px solid #765dd0;
+    border-radius: 0px;
+    color: white;
+    filter: drop-shadow(white 0.1rem 0.1rem 5px);
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* font-size: 1rem; */
+}
+
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  @keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  .animated-title {
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+    height: 90vmin;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vmin;
+  }
+  .animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .animated-title > div div {
+    font-size: 12vmin;
+    padding: 2vmin 0;
+    position: absolute;
+  }
+  .animated-title > div div span {
+    display: block;
+  }
+  .animated-title > div.text-top {
+    border-bottom: 1vmin solid #765dd0;
+    top: 0;
+  }
+  .animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
+  .animated-title > div.text-top div span:first-child {
+    color: white;
+  }
+  .animated-title > div.text-bottom {
+    bottom: 0;
+  }
+  .animated-title > div.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+  }
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(67, 99, 18);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgb(71, 103, 20);
+}
+
+.btn-white {
+    background-color: #1c1b21;
+    color: greenyellow;
+    border: 3px solid greenyellow;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: greenyellow;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.btn2:link,
+.btn2:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px #6d1a1a;
+}
+
+.btn2:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px #6d1a1a;
+}
+
+.btn2-white {
+    background-color: #1c1b21;
+    color: #F83E3E;
+    border: 3px solid #F83E3E;
+}
+
+.btn2::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn2-white::after {
+    background-color: #F83E3E;
+}
+
+.btn2:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn2-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.bestCoinRow{
+    transition: transform 0.3s;
+}
+
+.mouse-enter-best-coin-row {
+    transform: scale(1.15);
+    cursor: pointer;
+    /* filter: drop-shadow(#ca9eff 0.1rem 0.1rem 5px); */
+}

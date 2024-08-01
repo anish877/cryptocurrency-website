@@ -1,0 +1,120 @@
+<%- include("partials/head.ejs") %>
+
+<div style="display: flex; justify-content: space-between;">
+    <div style="display: flex; justify-content: center; margin-top: 3%; padding-left: 4%;">
+        <div class="btcDominance" data-pie='{ "percent": <%= stats.btcDominance %>, "size": 150 }'></div> 
+    </div>
+    <table style="width: 80%;" id="globalStats">
+        <thead>
+            <tr>
+                <th>Total Coins</th>
+                <th>Total Markets</th>
+                <th>Total Exchanges</th>
+                <th>Market Cap</th>
+                <th>24h Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="globalStats" id="totalCoins" value=<%= stats.totalCoins %>><spn3></spn3></td>
+                <td class="globalStats" id="totalMarkets" value=<%= stats.totalMarkets %>></td>
+                <td class="globalStats" id="totalExchanges" value=<%= stats.totalExchanges %>></td>
+                <td class="globalStats" style="color: greenyellow; filter: drop-shadow(greenyellow 0.1rem 0.1rem 5px);">$<span3 id="totalMarketCap" value=<%= stats.totalMarketCap %>></span3></td>
+                <td class="globalStats">$<span3 id="total24hVolume" value=<%= stats.total24hVolume %>></span3></td>
+                <!-- <td class="globalStats"  style="color: #F8F87C; filter: drop-shadow(#F8F87C 0.1rem 0.1rem 5px);"><span3 id="btcDominance" value=></span3> %</td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <div style="width: 20%;">
+        <table style="width: 100%; margin-top: 30px; margin-left: 20px;" id="bestCoins">
+            <thead>
+                <th></th>
+                <th>Top 3 Best Coins</th>
+            </thead>
+            <tbody>
+                <% bestCoins.forEach(item => {%>
+                    <tr id="bestCoinsRow" class="bestCoinRow">
+                        <td><img src=<%= item.iconUrl %> alt="" style = "height: 30; width: 30px; border-radius: 50%; filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px);"></td>
+                        <td><%= item.name %></td>
+                        <td hidden>
+                            <form action="/coinDetails" method="post" id="form">
+                                <input type="hidden" name="uuid" value="<%= item.uuid %>" id="uuid">
+                            </form>
+                        </td>
+                    </tr>
+               <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <div class="animated-title" style="height: 100vh; margin-left: 15%;">
+        <div class="text-top">
+          <div>
+            <span>unlock</span>
+            <span>the potential of</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>Digital Currencies!</div>
+        </div>
+    </div>
+</div>
+<div style="display: flex; justify-content: center; margin-top: 30vh;">
+    <table style="width: 80%;" id="coinsTable">
+    
+        <input type="hidden" value=>
+        <tr>
+            <th>
+            </th>
+            <th>
+            </th>
+            <th colspan="3">
+                COINS
+            </th>
+            <th>
+                PRICE
+            </th>
+            <th>
+                MARKET CAP
+            </th>
+            <th>
+                24H
+            </th>
+        </tr>
+    <% data.forEach((item) => { %>
+            <tr style="margin-bottom: 30px;" id="coinRow" class="coinRow">
+                <td style="font-size: 1rem; color: #765dd0;">
+                    <%= item.rank %>
+                </td>
+                <td>
+                    <img src=<%= item.iconUrl %> alt="" style="height: 30px; width: 30px; border-radius: 50%; filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px);">
+                </td>
+                <td colspan="3">
+                    <%= item.name %>
+                </td>
+                <td>
+                    $<%= item.price %>
+                </td>
+                <td>
+                    $<%= item.marketCap %>
+                </td>
+                <% if(Array.from(item.change)[0]==="-") {%>
+                    <td style="color: red;">
+                        <%= item.change %>
+                    </td>
+                <% } else { %>
+                    <td style="color: greenyellow;">
+                        +<%= item.change %>
+                    </td>
+                <% } %>
+                <td hidden>
+                    <form action="/coinDetails" method="post" id="form">
+                        <input type="hidden" name="uuid" value="<%= item.uuid %>" id="uuid">
+                    </form>
+                </td>
+            </tr>
+    <% }); %>
+    </table>
+</div>
+<%- include("partials/foot.ejs") %>
