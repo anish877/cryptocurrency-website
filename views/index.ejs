@@ -36,7 +36,7 @@
             <tbody>
                 <% bestCoins.forEach(item => {%>
                     <tr id="bestCoinsRow" class="bestCoinRow">
-                        <td><img src=<%= item.iconUrl %> alt="" style = "height: 30; width: 30px; border-radius: 50%; filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px);"></td>
+                        <td><img src=<%= item.iconUrl %> alt="" style = "height: 30; width: 30px; border-radius: 50%; filter: drop-shadow(#00ADB5 0.1rem 0.1rem 4px);"></td>
                         <td><%= item.name %></td>
                         <td hidden>
                             <form action="/coinDetails" method="post" id="form">
@@ -84,11 +84,11 @@
         </tr>
     <% data.forEach((item) => { %>
             <tr style="margin-bottom: 30px;" id="coinRow" class="coinRow">
-                <td style="font-size: 1rem; color: #765dd0;">
+                <td style="font-size: 1rem; color: #00ADB5;">
                     <%= item.rank %>
                 </td>
                 <td>
-                    <img src=<%= item.iconUrl %> alt="" style="height: 30px; width: 30px; border-radius: 50%; filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px);">
+                    <img src=<%= item.iconUrl %> alt="" style="height: 30px; width: 30px; border-radius: 50%; filter: drop-shadow(#00ADB5 0.1rem 0.1rem 4px);">
                 </td>
                 <td colspan="3">
                     <%= item.name %>
