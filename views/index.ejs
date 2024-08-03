@@ -1,7 +1,7 @@
 <%- include("partials/head.ejs") %>
 
 <div style="display: flex; justify-content: space-between;">
-    <div style="display: flex; justify-content: center; margin-top: 2.5%; padding-left: 6%;">
+    <div style="display: flex; justify-content: center; margin-top: 3%; padding-left: 4%;">
         <div class="btcDominance" data-pie='{ "percent": <%= stats.btcDominance %>, "size": 150 }'></div> 
     </div>
     <table style="width: 80%;" id="globalStats">
@@ -28,7 +28,7 @@
 </div>
 <div>
     <div style="width: 20%;">
-        <table style="width: 100%; margin-top: 50px; margin-left: 30px;" id="bestCoins">
+        <table style="width: 100%; margin-top: 30px; margin-left: 20px;" id="bestCoins">
             <thead>
                 <th></th>
                 <th>Top 3 Best Coins</th>
@@ -36,7 +36,7 @@
             <tbody>
                 <% bestCoins.forEach(item => {%>
                     <tr id="bestCoinsRow" class="bestCoinRow">
-                        <td><img src=<%= item.iconUrl %> alt="" style = "height: 30; width: 30px; border-radius: 50%; filter: drop-shadow(#00ADB5 0.1rem 0.1rem 4px);"></td>
+                        <td><img src=<%= item.iconUrl %> alt="" style = "height: 30; width: 30px; border-radius: 50%; filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px);"></td>
                         <td><%= item.name %></td>
                         <td hidden>
                             <form action="/coinDetails" method="post" id="form">
@@ -48,7 +48,7 @@
             </tbody>
         </table>
     </div>
-    <div class="animated-title" style="height: 100vh; margin-left: 15%; margin-top: 2%;">
+    <div class="animated-title" style="height: 100vh; margin-left: 15%;">
         <div class="text-top">
           <div>
             <span>unlock</span>
@@ -60,7 +60,7 @@
         </div>
     </div>
 </div>
-<div style="display: flex; justify-content: center; margin-top: 20vh;">
+<div style="display: flex; justify-content: center; margin-top: 30vh;">
     <table style="width: 80%;" id="coinsTable">
     
         <input type="hidden" value=>
@@ -84,11 +84,11 @@
         </tr>
     <% data.forEach((item) => { %>
             <tr style="margin-bottom: 30px;" id="coinRow" class="coinRow">
-                <td style="font-size: 1rem; color: #00ADB5;">
+                <td style="font-size: 1rem; color: #765dd0;">
                     <%= item.rank %>
                 </td>
                 <td>
-                    <img src=<%= item.iconUrl %> alt="" style="height: 30px; width: 30px; border-radius: 50%; filter: drop-shadow(#00ADB5 0.1rem 0.1rem 4px);">
+                    <img src=<%= item.iconUrl %> alt="" style="height: 30px; width: 30px; border-radius: 50%; filter: drop-shadow(#765dd0 0.1rem 0.1rem 4px);">
                 </td>
                 <td colspan="3">
                     <%= item.name %>

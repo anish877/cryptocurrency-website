@@ -118,14 +118,6 @@ app.get("/home", (req,res)=>{
     res.redirect("/");
 })
 
-app.get("/github", (req,res)=>{
-    res.redirect("https://github.com/anish877/cryptocurrency-website")
-})
-
-app.get("/contact", (req,res)=>{
-    res.redirect("https://anish877.github.io/portfolio/");
-})
-
 app.listen(port, ()=>{
     console.log(`Server started at port ${port}.`);
 })

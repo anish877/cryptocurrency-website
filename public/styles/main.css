@@ -2,13 +2,8 @@ body{
     background-color: #1c1b21;
     margin: 0px;
 }
-
-::-webkit-scrollbar {
-    display: none;
-}
-
 #navbar{
-    background-color: #00ADB5;
+    background-color: #765dd0;
     height: 40px;
 }
 
@@ -18,21 +13,21 @@ body{
     margin-top: 20px;
     margin-bottom: 50px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #00ADB5;
+    border-bottom: 1px solid #765dd0;
     align-items: end;
     font-family: "Source Code Pro", monospace;
     font-optical-sizing: auto;
     font-style: normal;
 }
 #heading  h1{
-    color: #00ADB5;
+    color: #765dd0;
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 3rem;
 }
 #heading > h2{
 
-    color: #00ADB5;
+    color: white;
     margin-bottom: 0PX;
     padding-bottom: 10px;
 }
@@ -44,7 +39,7 @@ body{
     
 }
 #coinDiscription{
-    color: #00ADB5;
+    color: white;
 }
 
 
@@ -57,7 +52,7 @@ body{
     font-size: 0.8rem;
 }
 span{
-    color: #00ADB5;
+    color: #765dd0;
     font-size: 1rem;
 }
 #timePeriodButtonsBlock{
@@ -71,7 +66,7 @@ span{
 }
 .timePeriodButtons{
     background-color: #1c1b21;
-    color: #00ADB5;
+    color: white;
     padding-left: 15px;
     padding-right: 15px;
     border: 0;
@@ -89,18 +84,18 @@ span{
 #statistics-supply h2{
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-style: normal;
-    color: #00ADB5;
+    color: #765dd0;
     font-size: 2rem;
 }
 #statistics-supply p{
-    color: #00ADB5;
+    color: white;
 }
 #statistics-supply th{
-    color: #00ADB5;
+    color: #765dd0;
     text-align: left;
 }
 #statistics-supply td{
-    color: #00ADB5;
+    color: white;
     text-align: right;
 }
 #linkButtons{
@@ -115,55 +110,51 @@ span{
     font-family: "Source Code Pro", monospace;
     font-style: normal;
     background-color: #1c1b2100;
-    color: #00ADB5;
+    color: white;
     padding-left: 5px;
     padding-right: 35px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 1rem;
     border: 0;
-    border-left: 1px solid #00ADB5;
+    border-left: 1px solid #765dd0;
 }
 
 th, td {
-    border-bottom: 1px solid #00ADB5;
+    border-bottom: 1px solid #765dd0;
     font-size: 1.3rem;
     padding: 30px 0px;
 }
 
 
 .pie-text-1 {
-    fill: #00ADB5;
+    fill: white;
     font-size: 0.8rem;
     /* e.t.c */
   }
 .btcDominance-text-1{
-    fill: #00ADB5;
+    fill: white;
     /* filter: drop-shadow(#F8F87C 0.1rem 0.1rem 3px); */
     font-size: 0.8rem;
 }
 
 #coinsTable{
-    color: #00ADB5;
+    color: white;
     font-family: "Source Code Pro", monospace;
     font-style: normal;
 }
 
 #coinsTable th {
     text-align: left;
-    color: #00ADB5;
+    color: #765dd0;
     font-size: 1rem;
-}
-
-#globalStats{
-    margin-left: 150px;
 }
 
 #globalStats th {
     font-family: "Source Code Pro", monospace;
     font-style: normal;
     text-align: left;
-    color: #00ADB5;
+    color: #765dd0;
     font-size: 0.8rem;
     border-bottom: 0px;
 }
@@ -179,7 +170,7 @@ th, td {
 
 #coinsTable button {
     background-color: #1c1b21;
-    color: #00ADB5;
+    color: #765dd0;
     border: 0;
 }
 
@@ -187,7 +178,7 @@ th, td {
     font-family: "Source Code Pro", monospace;
     font-style: normal;
     text-align: left;
-    color: #00ADB5;
+    color: #765dd0;
     font-size: 1.5rem;
     border-bottom: 0px;
 }
@@ -198,7 +189,7 @@ th, td {
     font-size: 1rem;
     color: whitesmoke;
     margin-top: 50px;
-    border-bottom: 1px solid #00ADB5;
+    border-bottom: 1px solid #765dd0;
     text-align: center;   
 }
 
@@ -215,11 +206,11 @@ th, td {
 .mouse-enter-button{
     position: relative;
     top: -5px;
-    background-color: #00ADB5;
-    border: 1px solid #00ADB5;
+    background-color: #765dd0;
+    border: 1px solid #765dd0;
     border-radius: 12px;
-    color: #00ADB5;
-    filter: drop-shadow(#00ADB5 0.1rem 0.1rem 5px);
+    color: white;
+    filter: drop-shadow(white 0.1rem 0.1rem 5px);
     font-family: "Source Code Pro", monospace;
     font-style: normal;
     padding-top: 10px;
@@ -232,11 +223,11 @@ th, td {
 .mouse-enter-period-button{
     position: relative;
     top: -5px;
-    background-color: #00ADB5;
-    border: 1px solid #00ADB5;
+    background-color: #765dd0;
+    border: 1px solid #765dd0;
     border-radius: 0px;
-    color: #00ADB5;
-    filter: drop-shadow(#00ADB5 0.1rem 0.1rem 5px);
+    color: white;
+    filter: drop-shadow(white 0.1rem 0.1rem 5px);
     font-family: "Source Code Pro", monospace;
     font-style: normal;
     padding-left: 15px;
@@ -254,7 +245,7 @@ th, td {
     100% { transform: translate3d(0, 0, 0); }
   }
   .animated-title {
-    color: #00ADB5;
+    color: white;
     font-family: Roboto, Arial, sans-serif;
     height: 90vmin;
     left: 50%;
@@ -278,7 +269,7 @@ th, td {
     display: block;
   }
   .animated-title > div.text-top {
-    border-bottom: 1vmin solid #00ADB5;
+    border-bottom: 1vmin solid #765dd0;
     top: 0;
   }
   .animated-title > div.text-top div {
@@ -289,7 +280,7 @@ th, td {
     transform: translate(0, 100%);
   }
   .animated-title > div.text-top div span:first-child {
-    color: #00ADB5;
+    color: white;
   }
   .animated-title > div.text-bottom {
     bottom: 0;
@@ -324,7 +315,7 @@ th, td {
     box-shadow: 0 5px 10px rgb(71, 103, 20);
 }
 
-.btn-#00ADB5 {
+.btn-white {
     background-color: #1c1b21;
     color: greenyellow;
     border: 3px solid greenyellow;
@@ -343,7 +334,7 @@ th, td {
     transition: all .4s;
 }
 
-.btn-#00ADB5::after {
+.btn-white::after {
     background-color: greenyellow;
 }
 
@@ -378,7 +369,7 @@ th, td {
     box-shadow: 0 5px 10px #6d1a1a;
 }
 
-.btn2-#00ADB5 {
+.btn2-white {
     background-color: #1c1b21;
     color: #F83E3E;
     border: 3px solid #F83E3E;
@@ -397,7 +388,7 @@ th, td {
     transition: all .4s;
 }
 
-.btn2-#00ADB5::after {
+.btn2-white::after {
     background-color: #F83E3E;
 }
 
