@@ -2,6 +2,11 @@ body{
     background-color: #1c1b21;
     margin: 0px;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 #navbar{
     background-color: #00ADB5;
     height: 40px;
@@ -148,6 +153,10 @@ th, td {
     text-align: left;
     color: #00ADB5;
     font-size: 1rem;
+}
+
+#globalStats{
+    margin-left: 150px;
 }
 
 #globalStats th {
