@@ -4,7 +4,7 @@ var sparkline  = JSON.parse(document.getElementById("sparkline").getAttribute("v
 var canvas = document.getElementById("priceChart");
 var ctx = canvas.getContext("2d");
 var gradient = ctx.createLinearGradient(0, 0, 0, 400);
-gradient.addColorStop(0, '#765dd0');   
+gradient.addColorStop(0, '#00ADB5');   
 gradient.addColorStop(1, '#1c1b21');
 
 const plugin = {
@@ -31,9 +31,9 @@ function generateChart(yValues){
         datasets: [{
           fill: true,
           backgroundColor: gradient, // Put the gradient here as a fill color
-          borderColor: "#765dd0",
-          pointBackgroundColor: "#765dd0",
-          pointBorderColor: "#765dd0",
+          borderColor: "#00ADB5",
+          pointBackgroundColor: "#00ADB5",
+          pointBorderColor: "#00ADB5",
           // pointHighlightFill: "#fff",
           // pointHighlightStroke: "#ff6c23",
           data: yValues
@@ -77,7 +77,7 @@ generateChart(sparkline);
 
 const globalConfig = {
   "strokeBottom": 5,
-  "colorSlice": "#765dd0",
+  "colorSlice": "#00ADB5",
   "colorCircle": "#1c1b21",
   "round": true,
   /* e.t.c */
