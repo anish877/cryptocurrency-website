@@ -7,6 +7,10 @@ body{
     height: 40px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 #heading{
     display: flex;
     gap: 70px;
