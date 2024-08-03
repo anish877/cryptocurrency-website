@@ -125,7 +125,6 @@ span{
 }
 
 th, td {
-    border-bottom: 1px solid #765dd0;
     font-size: 1.3rem;
     padding: 30px 0px;
 }
@@ -159,14 +158,18 @@ th, td {
     font-style: normal;
     text-align: left;
     color: #765dd0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     border-bottom: 0px;
+}
+
+#globalStats{
+    margin-left: 150px;
 }
 
 #globalStats td{
     font-family: "Source Code Pro", monospace;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: whitesmoke;
     padding: 0px;
     border: 0;
@@ -193,7 +196,6 @@ th, td {
     font-size: 1rem;
     color: whitesmoke;
     margin-top: 50px;
-    border-bottom: 1px solid #765dd0;
     text-align: center;   
 }
 
@@ -204,6 +206,10 @@ th, td {
 .mouse-enter-coin-row {
     transform: scale(1.15);
     cursor: pointer;
+    td{
+        border-bottom: 1px solid #765dd0;
+        border-top: 1px solid #765dd0;
+    }
     /* filter: drop-shadow(#ca9eff 0.1rem 0.1rem 5px); */
 }
 
@@ -425,5 +431,9 @@ th, td {
 .mouse-enter-best-coin-row {
     transform: scale(1.15);
     cursor: pointer;
+    td{
+        border-bottom: 1px solid #765dd0;
+        border-top: 1px solid #765dd0;
+    }
     /* filter: drop-shadow(#ca9eff 0.1rem 0.1rem 5px); */
 }

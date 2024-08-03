@@ -106,15 +106,15 @@ changeAnim.start()
 }
 
 if(document.getElementById("globalStats")){
-var totalCoins = new countUp.CountUp('totalCoins', document.getElementById("totalCoins").getAttribute("value"), { duration: 3, enableScrollSpy: true});
+var totalCoins = new countUp.CountUp('totalCoins', document.getElementById("totalCoins").getAttribute("value"), { duration: 4, });
 totalCoins.start()
-var totalMarkets = new countUp.CountUp('totalMarkets', document.getElementById("totalMarkets").getAttribute("value"), { duration: 3, enableScrollSpy: true});
+var totalMarkets = new countUp.CountUp('totalMarkets', document.getElementById("totalMarkets").getAttribute("value"), { duration: 4});
 totalMarkets.start()
-var totalExchanges = new countUp.CountUp('totalExchanges', document.getElementById("totalExchanges").getAttribute("value"), {duration: 3, enableScrollSpy: true});
+var totalExchanges = new countUp.CountUp('totalExchanges', document.getElementById("totalExchanges").getAttribute("value"), {duration: 4});
 totalExchanges.start()
-var totalMarketCap = new countUp.CountUp('totalMarketCap', document.getElementById("totalMarketCap").getAttribute("value"), { duration: 3, enableScrollSpy: true});
+var totalMarketCap = new countUp.CountUp('totalMarketCap', document.getElementById("totalMarketCap").getAttribute("value"), { duration: 4});
 totalMarketCap.start()
-var total24hVolume = new countUp.CountUp('total24hVolume', document.getElementById("total24hVolume").getAttribute("value"), { duration: 3, enableScrollSpy: true});
+var total24hVolume = new countUp.CountUp('total24hVolume', document.getElementById("total24hVolume").getAttribute("value"), { duration: 4});
 total24hVolume.start()
 }
 
